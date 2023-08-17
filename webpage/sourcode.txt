@@ -1,0 +1,125 @@
+HTML:
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="parent">
+        <div class="child">
+            <div class="grandchild img">
+                <img src="./img/1.jpg" alt="IMAGE">
+                <img src="./img/2.jpg" alt="IMAGE">
+                <img src="./img/3.jpg" alt="IMAGE">
+                <img src="./img/4.jpg" alt="IMAGE">
+                <img src="./img/5.jpg" alt="IMAGE">
+                <img src="./img/6.jpg" alt="IMAGE">
+            </div>
+            <div class="grandchild about">
+                <h3>We are the best digital marketers!</h3>
+                <p class="aboutpara">We have completed 12 contracts in thelast quater alone, from now on sky is the limit!</p>
+            </div>
+        </div>
+        <div class="child">
+            <div class="grandchild information">
+                <p>Here are some offers you can get from us!</p>
+                <ul class="list">
+                    <li>Small</li>
+                    <li>Medium</li>
+                    <li>Grande</li>
+                </ul>
+            </div>
+            <div class="grandchild link">
+                <a href="https://www.google.com">Home</a>
+                <a href="https://www.youtube.com">AboutUs</a>
+                <a href="https://www.wikipedia.com">SignUp</a>
+            </div>
+            <div class="grandchild social">HELLO THERE!</div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+CSS:
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.img{
+display: flex;
+flex-direction: column;
+overflow-y: scroll;
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.information{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.list{    
+list-style:circle;   
+}
+
+.link{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.link a{
+text-decoration: none;
+color: rgb(255, 111, 111);
+}
+
+.social{  
+    font-size: 52px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: opa 1s alternate infinite;
+}
+
+.parent{
+    display: flex;
+    height: 100vh;
+}
+
+.child{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.grandchild{
+    width: 100%;
+    flex: 1;
+}
+
+.img img{
+    width: 100%;
+}
+
+@keyframes opa{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+    
+}
